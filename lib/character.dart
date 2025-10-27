@@ -24,7 +24,7 @@
       var stamina = this.stamina;
       var dexterity = this.dexterity;
 
-      
+
       if(characterClass == 'warrior') {
         characterClass = 'warrior';
         health = 15;
@@ -81,6 +81,14 @@
 
 
       print("Character: $name, $characterClass, $health, $strength, $intelligence, $stamina, $dexterity");
+    }
+
+    void damageMultiplier(classOne, classTwo, action) {
+        var damage = this.damage;
+
+        if(classOne == 'shooter' && classTwo == 'tactician' && action =='shooterAttack') {
+            var damageToTactician = damage * 0.5;
+        }
     }
   }
 
