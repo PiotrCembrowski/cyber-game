@@ -12,7 +12,7 @@ class Character {
   int? dexterity;
   int damage = 2;
 
-  Character(this.name, this.characterClass) {}
+  Character(this.name, this.characterClass);
 
   // Methods
   void describe() {
