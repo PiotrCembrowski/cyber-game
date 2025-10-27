@@ -1,6 +1,6 @@
   class Character {
     String name;
-    String characterClass; 
+    String characterClass;
     int level = 0;
     int experience = 0;
     int? health;
@@ -8,12 +8,14 @@
     int? intelligence;
     int? stamina;
     int? dexterity;
+    double damage = 2;
 
-    Character(this.name, this.characterClass)
+    Character(this.name, this.characterClass) {
 
-    // Method
+    }
+
+    // Methods
     void describe() {
-
 
       var characterClass = this.characterClass;
       var health = this.health;
