@@ -1,7 +1,7 @@
 import 'dart:math';
 
-double doSomeDamage(int value) {
-  double damage = value * Random().nextDouble();
+int doSomeDamage(int value) {
+  int damage = value * Random().nextInt(10);
 
   return damage;
 }

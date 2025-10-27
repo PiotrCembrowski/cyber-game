@@ -1,3 +1,5 @@
+import 'helpers.dart' show doSomeDamage;
+
 class Character {
   String name;
   String characterClass;
@@ -8,7 +10,7 @@ class Character {
   int? intelligence;
   int? stamina;
   int? dexterity;
-  double damage = 2;
+  int damage = 2;
 
   Character(this.name, this.characterClass) {}
 
@@ -109,61 +111,65 @@ class Character {
     if (classOne == 'shooter' &&
         classTwo == 'tactician' &&
         action == 'shooterAttack') {
-      var damageShooterToTactician = damage * 0.5;
+      var value = damage * 2;
+      doSomeDamage(value);
     }
 
     if (classOne == 'shooter' &&
         classTwo == 'tactician' &&
         action == 'tacticianAttack') {
-      var damageTacticianToShoote = damage * 1.5;
+      var value = damage * 2;
+      doSomeDamage(value);
     }
 
     if (classOne == 'bruiser' &&
         classTwo == 'shooter' &&
         action == 'shooterAttack') {
-      var damageShooterToBruiser = damage * 1.5;
+      var value = damage * 2;
+      doSomeDamage(value);
     }
 
     if (classOne == 'bruiser' &&
         classTwo == 'shooter' &&
         action == 'bruiserAttack') {
-      var damageBruiserToTShooter = damage * 1.5;
+      var value = damage * 2;
+      doSomeDamage(value);
     }
 
     if (classOne == 'infiltrator' &&
         classTwo == 'warrior' &&
         action == 'infiltratorAttack') {
-      var damageInfiltratorToWarrior = damage * 0.5;
-    }
-
-    if (classOne == 'infiltrator' &&
-        classTwo == 'warrior' &&
-        action == 'warriorAttack') {
-      var damageWarriorToInfilitrator = damage;
+      var value = damage * 2;
+      doSomeDamage(value);
+      doSomeDamage(value);
     }
 
     if (classOne == 'warrior' &&
         classTwo == 'bruiser' &&
         action == 'warriorAttack') {
-      var damageWarriorToBruiser = damage * 0.5;
+      var value = damage ~/ 2;
+      doSomeDamage(value);
     }
 
     if (classOne == 'warrior' &&
         classTwo == 'bruiser' &&
         action == 'bruiserAttack') {
-      var damageBruiserToWarrior = damage * 1.5;
+      var value = damage * 2;
+      doSomeDamage(value);
     }
 
     if (classOne == 'tactician' &&
         classTwo == 'infiltrator' &&
         action == 'infiltratorAttack') {
-      var damageInfilitratorToTactician = damage * 1.5;
+      var value = damage * 2;
+      doSomeDamage(value);
     }
 
     if (classOne == 'tactician' &&
         classTwo == 'shooter' &&
         action == 'tacticianAttack') {
-      var damagetacticiantorToShooter = damage * 0.5;
+      var value = damage ~/ 2;
+      doSomeDamage(value);
     }
   }
 }
