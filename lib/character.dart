@@ -31,7 +31,6 @@ class Character {
       stamina = 10;
       dexterity = 10;
     }
-    ;
 
     if (characterClass == 'bruiser') {
       characterClass = 'bruiser';
@@ -41,7 +40,6 @@ class Character {
       stamina = 5;
       dexterity = 5;
     }
-    ;
 
     if (characterClass == 'infiltrator') {
       characterClass = 'infiltrator';
@@ -51,7 +49,6 @@ class Character {
       stamina = 15;
       dexterity = 15;
     }
-    ;
 
     if (characterClass == 'engineer') {
       characterClass = 'engineer';
@@ -61,7 +58,6 @@ class Character {
       stamina = 10;
       dexterity = 5;
     }
-    ;
 
     if (characterClass == 'shooter') {
       characterClass = 'shooter';
@@ -71,7 +67,6 @@ class Character {
       stamina = 10;
       dexterity = 20;
     }
-    ;
 
     if (characterClass == 'generalist') {
       characterClass = 'generalist';
@@ -81,7 +76,6 @@ class Character {
       stamina = 10;
       dexterity = 10;
     }
-    ;
 
     print(
       "Character: $name, $characterClass, $health, $strength, $intelligence, $stamina, $dexterity",
