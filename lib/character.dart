@@ -83,6 +83,23 @@
       print("Character: $name, $characterClass, $health, $strength, $intelligence, $stamina, $dexterity");
     }
 
+    // *   Blasters are strong against Bruisers.
+    // * Advantage against Bruisers: Blasters get a guaranteed critical hit and ignore the Bruiser's defense. They also gain "Focused Attacks" when attacking or being attacked by Bruisers.
+    // * Weakness against Tacticians: Blasters take increased damage from Tacticians.
+    // * Bruisers are strong against Scrappers.
+    // * Advantage against Scrappers: Bruisers gain "Enraged," which increases their stats when attacking or being attacked by Scrappers.
+    // * Weakness against Blasters: Blasters get a guaranteed critical hit and ignore the Bruiser's defense when attacking them.
+    // * Scrappers are strong against Infiltrators.
+    // * Advantage against Infiltrators: Scrappers perform a free follow-up attack after hitting an Infiltrator.
+    // * Weakness against Bruisers: Scrappers take increased damage from Bruisers.
+    // * Infiltrators are strong against Tacticians.
+    // * Advantage against Tacticians: Infiltrators can counter-attack when targeted by a Tactician. They also gain "Combat Reflexes" and increased accuracy.
+    // *Weakness against Scrappers: Infiltrators take increased damage from Scrappers.
+    // *Tacticians are strong against Blasters.
+    // *Advantage against Blasters: Tacticians gain "Tactical Maneuvers" when attacking or being attacked by Blasters. This allows them to take reduced damage from Blasters.
+    // *Weakness against Infiltrators: Tacticians are vulnerable to Infiltrator attacks.
+    // *Generalists have no class strengths or weaknesses. 
+
     void damageMultiplier(classOne, classTwo, action) {
         var damage = this.damage;
 
@@ -116,6 +133,14 @@
 
         if(classOne == 'warrior' && classTwo == 'bruiser' && action =='bruiserAttack') {
             var damageBruiserToWarrior = damage * 1.5;
+        }
+
+        if(classOne == 'tactician' && classTwo == 'infiltrator' && action =='infiltratorAttack') {
+            var damageInfilitratorToTactician = damage * 1.5;
+        }
+
+        if(classOne == 'tactician' && classTwo == 'shooter' && action =='tacticianAttack') {
+            var damagetacticiantorToShooter = damage * 0.5;
         }
     }
   }
