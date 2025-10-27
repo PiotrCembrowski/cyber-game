@@ -19,7 +19,7 @@
       var health = this.health;
       var strength = this.strength;
       var intelligence = this.intelligence;
-      var staming = stamina;
+      var stamina = this.stamina;
       var dexterity = this.dexterity;
 
       
@@ -30,20 +30,22 @@
         intelligence = 5;
         stamina = 10;
         dexterity = 10;
-      }
+      };
 
       if(profession == 'bruiser') {
         profession = 'bruiser';
-        health = 15;
-        strength = 15;
+        health = 20;
+        strength = 20;
         intelligence = 5;
-        stamina = 10;
-        dexterity = 10;
-      }
+        stamina = 5;
+        dexterity = 5;
+      };
 
       print("Character: $name, $profession, $health, $strength, $intelligence, $stamina, $dexterity");
     }
-  };
+  }
+
+
 void main() {
   
 };
