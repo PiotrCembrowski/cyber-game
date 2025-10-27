@@ -87,7 +87,35 @@
         var damage = this.damage;
 
         if(classOne == 'shooter' && classTwo == 'tactician' && action =='shooterAttack') {
-            var damageToTactician = damage * 0.5;
+            var damageShooterToTactician = damage * 0.5;
+        }
+
+        if(classOne == 'shooter' && classTwo == 'tactician' && action =='tacticianAttack') {
+            var damageTacticianToShoote = damage * 1.5;
+        }
+
+        if(classOne == 'bruiser' && classTwo == 'shooter' && action =='shooterAttack') {
+            var damageShooterToBruiser = damage * 1.5;
+        }
+
+        if(classOne == 'bruiser' && classTwo == 'shooter' && action =='bruiserAttack') {
+            var damageBruiserToTShooter = damage * 1.5;
+        }
+
+        if(classOne == 'infiltrator' && classTwo == 'warrior' && action =='infiltratorAttack') {
+            var damageInfiltratorToWarrior= damage * 0.5;
+        }
+
+        if(classOne == 'infiltrator' && classTwo == 'warrior' && action =='warriorAttack') {
+            var damageWarriorToInfilitrator = damage;
+        }
+
+        if(classOne == 'warrior' && classTwo == 'bruiser' && action =='warriorAttack') {
+            var damageWarriorToBruiser = damage * 0.5;
+        }
+
+        if(classOne == 'warrior' && classTwo == 'bruiser' && action =='bruiserAttack') {
+            var damageBruiserToWarrior = damage * 1.5;
         }
     }
   }
