@@ -9,6 +9,11 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  characters: ^1.4.0
+  flame: ^1.33.0
+  flame_forge2d: ^0.19.2+1
+  flame_kenney_xml: ^0.1.1+17
+  xml: ^6.6.1
 
 dev_dependencies:
   flutter_test:
