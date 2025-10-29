@@ -1,6 +1,6 @@
 {
-    "name": "cyber_game",
-    "short_name": "cyber_game",
+    "name": "forge2d_game",
+    "short_name": "forge2d_game",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
